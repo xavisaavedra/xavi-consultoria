@@ -2,33 +2,86 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Consultoría y Formación Power BI | Microsoft Fabric</title>
-  <meta name="description" content="Consultoría y formación en Power BI, Microsoft Fabric y Microsoft 365. Ayudo a empresas a convertir datos en decisiones." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>Consultor Power BI y Microsoft Fabric en Barcelona | Xavi Saavedra</title>
+  <meta name="description" content="Consultor y formador freelance en Power BI, Microsoft Fabric y Microsoft 365. Ayudo a empresas a convertir datos en decisiones claras y accionables." />
+
+  <!-- SEO técnico -->
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://xavisaavedra.com/" />
+
+  <!-- Idiomas preparados -->
+  <link rel="alternate" hreflang="es" href="https://xavisaavedra.com/" />
+  <link rel="alternate" hreflang="ca" href="https://xavisaavedra.com/ca/" />
+  <link rel="alternate" hreflang="x-default" href="https://xavisaavedra.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Consultor Power BI y Microsoft Fabric | Xavi Saavedra" />
+  <meta property="og:description" content="Consultoría y formación en Power BI, Microsoft Fabric y analítica de datos para empresas." />
+  <meta property="og:url" content="https://xavisaavedra.com/" />
+
+  <!-- Estilos -->
   <style>
     :root {
       --primary: #2563eb;
       --dark: #0f172a;
       --gray: #475569;
       --light: #f8fafc;
-      --max-width: 1100px;
+      --max-width: 1120px;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
       color: var(--dark);
-      line-height: 1.6;
-      background: white;
+      line-height: 1.65;
+      background: #ffffff;
+    }
+
+    /* Animaciones suaves base */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     header {
+      padding: 5rem 1.5rem 4rem;
       background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-      padding: 4rem 1.5rem 3rem;
+      animation: fadeUp 0.8s ease-out both;
     }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      margin-left: 1.25rem;
+      text-decoration: none;
+      color: var(--gray);
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after { width: 100%; }
 
     .container {
       max-width: var(--max-width);
@@ -36,209 +89,201 @@
     }
 
     h1 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.2;
-      margin-bottom: 1rem;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
     }
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
+      font-size: 1.9rem;
+      margin-bottom: 1.25rem;
     }
 
     h3 {
       margin-bottom: 0.5rem;
+      font-size: 1.15rem;
     }
 
     p {
       color: var(--gray);
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
+      max-width: 720px;
     }
 
-    .hero p {
-      font-size: 1.1rem;
-      max-width: 700px;
-    }
+    .hero p { font-size: 1.15rem; }
 
     .cta {
       display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
+      margin-top: 1.75rem;
+      padding: 0.85rem 1.6rem;
       background: var(--primary);
-      color: white;
+      color: #ffffff;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 10px;
       font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37,99,235,0.25);
+    }
+
+    .cta.secondary {
+      background: var(--dark);
+      margin-left: 0.75rem;
     }
 
     section {
-      padding: 3rem 1.5rem;
+      padding: 4rem 1.5rem;
+      animation: fadeUp 0.8s ease-out both;
     }
+
+    section:nth-of-type(2) { animation-delay: 0.1s; }
+    section:nth-of-type(3) { animation-delay: 0.2s; }
+    section:nth-of-type(4) { animation-delay: 0.3s; }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
     }
 
     .card {
       border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 1.75rem;
-      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      background: #ffffff;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .highlight {
-      background: var(--light);
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(15,23,42,0.08);
+    }
+
+    .highlight { background: var(--light); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-grid img {
+      max-width: 260px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      justify-self: end;
+      transition: transform 0.3s ease;
+    }
+
+    .about-grid img:hover {
+      transform: translateY(-4px);
     }
 
     footer {
-      padding: 2rem 1.5rem;
+      padding: 3rem 1.5rem;
       border-top: 1px solid #e2e8f0;
       font-size: 0.9rem;
       color: var(--gray);
     }
 
-    .lang {
-      font-size: 0.9rem;
-      margin-top: 1rem;
-    }
+    footer a { color: var(--gray); text-decoration: none; }
 
-    .tech span {
-      display: inline-block;
-      margin-right: 0.75rem;
-      margin-bottom: 0.5rem;
-      padding: 0.4rem 0.7rem;
-      background: #eef2ff;
-      color: #1e3a8a;
-      border-radius: 5px;
-      font-size: 0.85rem;
-      font-weight: 500;
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-grid img { justify-self: start; margin-top: 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="container hero">
-      <h1>Consultoría y formación en Power BI, Microsoft Fabric y Microsoft 365</h1>
+<header>
+  <div class="container">
+    <nav>
+      <strong>Xavi Saavedra</strong>
+      <div>
+        <a href="#servicios">Servicios</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="/blog/">Blog</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <h1>Consultor Power BI y Microsoft Fabric para empresas</h1>
       <p>
-        Ayudo a empresas y equipos a convertir datos en decisiones útiles y a sacar
-        productividad real del ecosistema Microsoft.
+        Ayudo a empresas que ya trabajan con Microsoft a transformar sus datos en
+        información clara, fiable y útil para la toma de decisiones.
       </p>
-      <a href="#contacto" class="cta">Hablemos de tu caso</a>
-      <div class="lang">ES | CA</div>
+      <a href="#contacto" class="cta">Contactar</a>
+      <a href="https://outlook.office.com/bookwithme/user/750f6287903c49b699928eef136b9efe@xavisaavedra.com/meetingtype/8KyUPZeE6EyM2Cmo3k2FGw2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank" class="cta secondary">Reservar llamada</a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <section>
-    <div class="container">
-      <h2>Servicios</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Consultoría Power BI & Fabric</h3>
-          <p>
-            Modelado de datos, DAX, optimización de rendimiento y definición de
-            arquitecturas analíticas escalables.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Formación a empresas</h3>
-          <p>
-            Formación práctica y orientada a negocio en Power BI, Power Platform y
-            Microsoft 365.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Acompañamiento y mentoring</h3>
-          <p>
-            Soporte experto, revisión de modelos existentes y acompañamiento en
-            proyectos críticos.
-          </p>
-        </div>
+<section id="servicios">
+  <div class="container">
+    <h2>Servicios de consultoría y formación</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Consultoría Power BI y Fabric</h3>
+        <p>Modelado de datos, DAX, optimización de informes y diseño de arquitecturas analíticas escalables.</p>
+      </div>
+      <div class="card">
+        <h3>Formación corporativa</h3>
+        <p>Formación práctica en Power BI, Power Platform y Microsoft 365 orientada a negocio.</p>
+      </div>
+      <div class="card">
+        <h3>Mentoring y acompañamiento</h3>
+        <p>Revisión de modelos existentes, soporte experto y acompañamiento en proyectos críticos.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="highlight">
-    <div class="container">
-      <h2>Por qué trabajar conmigo</h2>
-      <div class="grid">
-        <div>
-          <p>
-            Más de 30 años de experiencia en IT y entornos empresariales reales.
-            Visión global: técnica, funcional y de negocio.
-          </p>
-        </div>
-        <div>
-          <p>
-            Especialista en el ecosistema Microsoft, con foco en soluciones útiles,
-            mantenibles y bien explicadas.
-          </p>
-        </div>
-        <div>
-          <p>
-            Capacidad de traducir conceptos complejos en decisiones claras para
-            perfiles técnicos y no técnicos.
-          </p>
-        </div>
+<section class="highlight" id="sobre-mi">
+  <div class="container">
+    <h2>Sobre mí</h2>
+    <div class="about-grid">
+      <div>
+        <p><strong>Xavi Saavedra</strong></p>
+        <p>
+          Consultor y formador freelance especializado en Power BI, Microsoft Fabric y analítica de datos.
+          Más de 30 años de experiencia en entornos IT reales, con un enfoque claro: soluciones simples,
+          mantenibles y orientadas a negocio.
+        </p>
       </div>
+      <img src="xavi-consultor-powerbi.jpg" alt="Xavi Saavedra, consultor Power BI y Microsoft Fabric" loading="lazy" />
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <div class="container">
-      <h2>Sobre mí</h2>
-      <div class="grid" style="align-items: center;">
-        <div>
-          <p><strong>Xavi</strong></p>
-          <p>
-            Soy consultor y formador especializado en Microsoft, con una trayectoria
-            extensa en IT y un enfoque muy práctico. Mi trabajo se centra en ayudar a
-            empresas a obtener valor real de sus datos y de sus herramientas, evitando
-            soluciones innecesariamente complejas.
-          </p>
-        </div>
-        <div>
-          <img src="perfil.jpg" alt="Xavi - Consultor Power BI y Microsoft Fabric" style="max-width: 260px; border-radius: 12px; border: 1px solid #e2e8f0;" />
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="contacto">
+  <div class="container">
+    <h2>Contacto</h2>
+    <p>
+      Puedes escribirme directamente o reservar una llamada para comentar tu caso sin compromiso.
+    </p>
+    <p>
+      <strong>Email:</strong> <a href="mailto:xavi.saavedra@gmail.com">xavi.saavedra@gmail.com</a><br />
+      <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/xavisaavedra/" target="_blank">linkedin.com/in/xavisaavedra</a>
+    </p>
+    <a href="https://outlook.office.com/bookwithme/user/750f6287903c49b699928eef136b9efe@xavisaavedra.com/meetingtype/8KyUPZeE6EyM2Cmo3k2FGw2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank" class="cta">Reservar llamada de 30 minutos</a>
+  </div>
+</section>
 
-  <section class="highlight">
-    <div class="container">
-      <h2>Tecnologías</h2>
-      <div class="tech">
-        <span>Power BI</span>
-        <span>Microsoft Fabric</span>
-        <span>Power Platform</span>
-        <span>Microsoft 365</span>
-        <span>DAX</span>
-        <span>Modelado de datos</span>
-      </div>
+<footer>
+  <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+    <div>
+      © 2026 · Xavi Saavedra · Consultor Power BI y Microsoft Fabric
     </div>
-  </section>
-
-  <section id="contacto">
-    <div class="container">
-      <h2>Contacto</h2>
-      <p>
-        Si quieres comentar tu caso, evaluar una formación o revisar un proyecto
-        existente, escríbeme sin compromiso.
-      </p>
-      <p>
-        <strong>Email:</strong> tuemail@dominio.com<br />
-        <strong>LinkedIn:</strong> linkedin.com/in/tuperfil
-      </p>
+    <div style="font-size:0.9rem;">
+      <a href="https://xavisaavedra.com/">ES</a> · <a href="https://xavisaavedra.com/ca/">CA</a>
     </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      © 2026 · Consultoría y Formación Microsoft · Power BI & Fabric
-    </div>
-  </footer>
+  </div>
+</footer>
 
 </body>
 </html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Consultor Power BI i Microsoft Fabric a Barcelona | Xavi Saavedra</title>
+  <meta name="description" content="Consultor i formador freelance en Power BI, Microsoft Fabric i Microsoft 365. Ajudo empreses a convertir dades en decisions clares i útils." />
+
+  <!-- SEO tècnic -->
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://xavisaavedra.com/ca/" />
+
+  <!-- Idiomes -->
+  <link rel="alternate" hreflang="ca" href="https://xavisaavedra.com/ca/" />
+  <link rel="alternate" hreflang="es" href="https://xavisaavedra.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://xavisaavedra.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Consultor Power BI i Microsoft Fabric | Xavi Saavedra" />
+  <meta property="og:description" content="Consultoria i formació en Power BI, Microsoft Fabric i analítica de dades per a empreses." />
+  <meta property="og:url" content="https://xavisaavedra.com/ca/" />
+
+  <!-- Estils (mateixos que ES) -->
+  <style>
+    :root {
+      --primary: #2563eb;
+      --dark: #0f172a;
+      --gray: #475569;
+      --light: #f8fafc;
+      --max-width: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      color: var(--dark);
+      line-height: 1.65;
+      background: #ffffff;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      padding: 5rem 1.5rem 4rem;
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      animation: fadeUp 0.8s ease-out both;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      margin-left: 1.25rem;
+      text-decoration: none;
+      color: var(--gray);
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after { width: 100%; }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1.25rem;
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+    }
+
+    p {
+      color: var(--gray);
+      margin-bottom: 1.25rem;
+      max-width: 720px;
+    }
+
+    .hero p { font-size: 1.15rem; }
+
+    .cta {
+      display: inline-block;
+      margin-top: 1.75rem;
+      padding: 0.85rem 1.6rem;
+      background: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37,99,235,0.25);
+    }
+
+    .cta.secondary {
+      background: var(--dark);
+      margin-left: 0.75rem;
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+      animation: fadeUp 0.8s ease-out both;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .card {
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 2rem;
+      background: #ffffff;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(15,23,42,0.08);
+    }
+
+    .highlight { background: var(--light); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-grid img {
+      max-width: 260px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      justify-self: end;
+    }
+
+    footer {
+      padding: 3rem 1.5rem;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
+    footer a { color: var(--gray); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-grid img { justify-self: start; margin-top: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <strong>Xavi Saavedra</strong>
+      <div>
+        <a href="#serveis">Serveis</a>
+        <a href="#sobre-mi">Sobre mi</a>
+        <a href="/blog/">Blog</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <h1>Consultor Power BI i Microsoft Fabric per a empreses</h1>
+      <p>
+        Ajudo empreses que ja treballen amb Microsoft a transformar les seves dades
+        en informació clara, fiable i útil per a la presa de decisions.
+      </p>
+      <a href="#contacte" class="cta">Contactar</a>
+      <a href="https://outlook.office.com/bookwithme/user/750f6287903c49b699928eef136b9efe@xavisaavedra.com/meetingtype/8KyUPZeE6EyM2Cmo3k2FGw2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank" class="cta secondary">Reservar trucada</a>
+    </div>
+  </div>
+</header>
+
+<section id="serveis">
+  <div class="container">
+    <h2>Serveis de consultoria i formació</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Consultoria Power BI i Fabric</h3>
+        <p>Modelatge de dades, DAX, optimització d'informes i disseny d'arquitectures analítiques escalables.</p>
+      </div>
+      <div class="card">
+        <h3>Formació corporativa</h3>
+        <p>Formació pràctica en Power BI, Power Platform i Microsoft 365 orientada a negoci.</p>
+      </div>
+      <div class="card">
+        <h3>Mentoria i acompanyament</h3>
+        <p>Revisió de models existents, suport expert i acompanyament en projectes crítics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="highlight" id="sobre-mi">
+  <div class="container">
+    <h2>Sobre mi</h2>
+    <div class="about-grid">
+      <div>
+        <p><strong>Xavi Saavedra</strong></p>
+        <p>
+          Consultor i formador freelance especialitzat en Power BI, Microsoft Fabric i analítica de dades.
+          Més de 30 anys d’experiència en entorns IT reals, amb un enfocament clar: solucions simples,
+          mantenibles i orientades a negoci.
+        </p>
+      </div>
+      <img src="/perfil.jpg" alt="Xavi Saavedra, consultor Power BI i Microsoft Fabric" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<section id="contacte">
+  <div class="container">
+    <h2>Contacte</h2>
+    <p>
+      Pots escriure’m directament o reservar una trucada per comentar el teu cas sense compromís.
+    </p>
+    <p>
+      <strong>Email:</strong> <a href="mailto:xavi.saavedra@xavisaavedra.com">xavi.saavedra@xavisaavedra.com</a><br />
+      <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/xavisaavedra/" target="_blank">linkedin.com/in/xavisaavedra</a>
+    </p>
+    <a href="https://outlook.office.com/bookwithme/user/750f6287903c49b699928eef136b9efe@xavisaavedra.com/meetingtype/8KyUPZeE6EyM2Cmo3k2FGw2?anonymous&ismsaljsauthenabled&ep=mlink" target="_blank" class="cta">Reservar trucada de 30 minuts</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+    <div>
+      © 2026 · Xavi Saavedra · Consultor Power BI i Microsoft Fabric
+    </div>
+    <div style="font-size:0.9rem;">
+      <a href="https://xavisaavedra.com/">ES</a> · <a href="https://xavisaavedra.com/ca/">CA</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
